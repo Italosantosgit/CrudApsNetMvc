@@ -47,8 +47,17 @@ namespace CrudAspNetMvc.Controllers
          };
 
         // GET: Clientes
-        public ActionResult Index(string busca = "", int pagina = 1)
+        public ActionResult Index(string busca = "", int pagina = 1, int tamanhoPagina = 5)
         {
+            //var clientes = db.Clientes.Where(p => p.Nome.Contains(busca)).OrderBy(p => p.Id).ToPagedList(pagina, tamanhoPagina);
+
+            if (String.IsNullOrWhiteSpace(busca))
+            {
+                ViewBag.Busca = busca;
+                return View(db.Clientes
+                              .OrderBy(c => c.Nome)
+                              .ToPagedList(pagina, tamanhoPagina));
+            }
             if (!String.IsNullOrWhiteSpace(busca))
             {
                 ViewBag.Busca = busca;
@@ -58,7 +67,10 @@ namespace CrudAspNetMvc.Controllers
                               .ToPagedList(pagina, 10));
             }
             else
-                return View(new List<Cliente>().ToPagedList(1,1));
+            {
+                return View(new List<Cliente>().ToPagedList(1, 1));
+            }
+            
         }
 
         // GET: Clientes/Create
@@ -75,7 +87,7 @@ namespace CrudAspNetMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Nome,Sexo,CPF,Email,Telefone,Logradouro,Numero,Complemento,Bairro,Cidade,Estado,EstadoCivil")] Cliente cliente)
         {
-            if(db.Clientes.Count(c => c.CPF == cliente.CPF) > 0)
+            if(db.Clientes.Count(c => c.CPF == cliente.CPF) > 0 )
             {
                 ModelState.AddModelError("CPF", "Esse CPF já está em uso");
             }
