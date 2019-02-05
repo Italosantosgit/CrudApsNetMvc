@@ -70,7 +70,7 @@ C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\bin\Microsoft.AI.Depende
 C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\bin\Microsoft.AI.Web.xml
-C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\obj\Debug\CrudAspNetMvc.csprojResolveAssemblyReference.cache
 C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\obj\Debug\CrudAspNetMvc.csproj.CoreCompileInputs.cache
 C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\obj\Debug\CrudAspNetMvc.dll
 C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\obj\Debug\CrudAspNetMvc.pdb
+C:\Users\Italo\source\repos\CrudAspNetMvc\CrudAspNetMvc\obj\Debug\CrudAspNetMvc.csprojResolveAssemblyReference.cache

@@ -53,7 +53,7 @@ namespace CrudAspNetMvc.Attributes
 
             digito = digito + resto.ToString();
 
-            return cpf.EndsWith(digito) ? ValidationResult.Success : new ValidationResult(ErrorMessage); 
+            return cpf.EndsWith(digito) ? ValidationResult.Success : new ValidationResult(ErrorMessage);
         }
     }
 }
